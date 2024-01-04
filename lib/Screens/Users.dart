@@ -17,7 +17,7 @@ class UsersPage extends StatelessWidget {
    //
     return Scaffold(
       appBar: AppBar(
-        title: Text('Users'),
+        title: const Text('Users'),
       ),
       body:  Consumer(builder: (BuildContext context, WidgetRef ref,Widget? child){
         final userData = ref.watch(userDataProvider);
@@ -37,7 +37,7 @@ class UsersPage extends StatelessWidget {
             },
             error: ((error, stackTrace) => Text(error.toString())),
             loading: () {
-              return Center(child: CircularProgressIndicator());
+              return const Center(child: CircularProgressIndicator());
             });
       })
 
